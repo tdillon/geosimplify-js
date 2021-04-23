@@ -14,7 +14,7 @@ function getRuler(latitude) {
 // Cache rulers every 0.00001 degrees of latitude
     const roundedLatitude = Math.round(latitude * 100000);
     if (rulerCache[roundedLatitude] === undefined) {
-        rulerCache[roundedLatitude] = cheapRuler(latitude, 'meters');
+        rulerCache[roundedLatitude] = new cheapRuler(latitude, 'meters');
     }
     return rulerCache[roundedLatitude];
 }
