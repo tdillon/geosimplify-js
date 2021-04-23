@@ -6,7 +6,7 @@
  mourner.github.io/simplify-js
 */
 'use strict';
-const cheapRuler = require('cheap-ruler');
+import cheapRuler from 'https://unpkg.com/cheap-ruler/index.js';
 
 const rulerCache = {};
 
@@ -70,4 +70,4 @@ function simplify(points, offsetTolerance, gapTolerance) {
     return points;
 }
 
-module.exports = simplify;
+export default simplify;
